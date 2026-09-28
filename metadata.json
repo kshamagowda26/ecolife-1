@@ -1,0 +1,6 @@
+{
+  "name": "EcoLife – Sustainable Living",
+  "description": "A modern, responsive educational web platform promoting sustainable living, waste management, renewable energy, and eco-conscious habits.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

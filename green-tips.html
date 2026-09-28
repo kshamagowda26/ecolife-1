@@ -1,0 +1,368 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Green Tips – Daily Eco Habits, Energy, Water & Work Conservation | EcoLife</title>
+    <meta name="description" content="Discover actionable green tips across home energy, water conservation, plastic reduction, commute, and workplace habits. Interactive checklist included." />
+    <meta property="og:title" content="Green Tips & Interactive Eco-Habit Tracker – EcoLife" />
+    <meta property="og:description" content="Take daily environmental action: track your score with our interactive habit checklist." />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/src/index.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              forest: {
+                50: '#f1f9f4',
+                100: '#d8f3dc',
+                200: '#b7e4c7',
+                300: '#95d5b2',
+                400: '#74c69d',
+                500: '#52b788',
+                600: '#40916c',
+                700: '#2d6a4f',
+                800: '#1b4332',
+                900: '#0f291e',
+              }
+            }
+          }
+        }
+      }
+    </script>
+  </head>
+  <body class="bg-[#faf9f6] text-slate-800 antialiased selection:bg-emerald-200 selection:text-emerald-950">
+    <!-- Header -->
+    <header id="site-header" class="sticky top-0 z-50 transition-all duration-300 bg-white/90 backdrop-blur-md border-b border-emerald-950/10">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-20">
+          <a href="/index.html" class="flex items-center gap-3 group">
+            <div class="w-10 h-10 rounded-xl bg-emerald-800 text-emerald-100 flex items-center justify-center font-bold text-xl shadow-sm transition-transform group-hover:scale-105">🌱</div>
+            <div>
+              <span class="text-xl font-bold tracking-tight text-emerald-950">EcoLife</span>
+              <span class="block text-[11px] font-medium tracking-wider uppercase text-emerald-700">Sustainable Living</span>
+            </div>
+          </a>
+
+          <nav class="hidden lg:flex items-center gap-1 xl:gap-2">
+            <a href="/index.html" data-nav-link class="px-2.5 py-1.5 text-[13px] font-medium text-slate-700 hover:text-emerald-700 hover:bg-emerald-50/70 rounded-lg transition-colors whitespace-nowrap">Home</a>
+            <a href="/about.html" data-nav-link class="px-2.5 py-1.5 text-[13px] font-medium text-slate-700 hover:text-emerald-700 hover:bg-emerald-50/70 rounded-lg transition-colors whitespace-nowrap">About</a>
+            <a href="/sustainable-living.html" data-nav-link class="px-2.5 py-1.5 text-[13px] font-medium text-slate-700 hover:text-emerald-700 hover:bg-emerald-50/70 rounded-lg transition-colors whitespace-nowrap">Living</a>
+            <a href="/waste-management.html" data-nav-link class="px-2.5 py-1.5 text-[13px] font-medium text-slate-700 hover:text-emerald-700 hover:bg-emerald-50/70 rounded-lg transition-colors whitespace-nowrap">Waste</a>
+            <a href="/recycling.html" data-nav-link class="px-2.5 py-1.5 text-[13px] font-medium text-slate-700 hover:text-emerald-700 hover:bg-emerald-50/70 rounded-lg transition-colors whitespace-nowrap">Recycling</a>
+            <a href="/renewable-energy.html" data-nav-link class="px-2.5 py-1.5 text-[13px] font-medium text-slate-700 hover:text-emerald-700 hover:bg-emerald-50/70 rounded-lg transition-colors whitespace-nowrap">Renewable Energy</a>
+            <a href="/sustainable-food.html" data-nav-link class="px-2.5 py-1.5 text-[13px] font-medium text-slate-700 hover:text-emerald-700 hover:bg-emerald-50/70 rounded-lg transition-colors whitespace-nowrap">Food</a>
+            <a href="/eco-products.html" data-nav-link class="px-2.5 py-1.5 text-[13px] font-medium text-slate-700 hover:text-emerald-700 hover:bg-emerald-50/70 rounded-lg transition-colors whitespace-nowrap">Eco Products</a>
+            <a href="/green-tips.html" data-nav-link class="px-2.5 py-1.5 text-[13px] font-medium text-slate-700 hover:text-emerald-700 hover:bg-emerald-50/70 rounded-lg transition-colors whitespace-nowrap">Green Tips</a>
+            <a href="/gallery.html" data-nav-link class="px-2.5 py-1.5 text-[13px] font-medium text-slate-700 hover:text-emerald-700 hover:bg-emerald-50/70 rounded-lg transition-colors whitespace-nowrap">Gallery</a>
+            <a href="/contact.html" data-nav-link class="px-2.5 py-1.5 text-[13px] font-medium text-slate-700 hover:text-emerald-700 hover:bg-emerald-50/70 rounded-lg transition-colors whitespace-nowrap">Contact</a>
+          </nav>
+
+          <div class="flex items-center gap-3">
+            <a href="#tracker" class="hidden sm:inline-flex items-center justify-center px-4 py-2 text-xs font-semibold text-white bg-emerald-800 rounded-lg hover:bg-emerald-700 shadow-sm transition-all whitespace-nowrap">
+              Habit Tracker
+            </a>
+            <button id="mobile-menu-btn" type="button" aria-expanded="false" aria-label="Toggle navigation menu" class="lg:hidden p-2 rounded-lg text-slate-700 hover:bg-emerald-50">
+              <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div id="mobile-menu" class="hidden lg:hidden border-t border-slate-200 bg-white/95 px-4 pt-3 pb-6 space-y-1 shadow-xl">
+        <a href="/index.html" class="block px-3 py-2 rounded-md text-sm font-medium text-slate-700 hover:bg-emerald-50">Home</a>
+        <a href="/about.html" class="block px-3 py-2 rounded-md text-sm font-medium text-slate-700 hover:bg-emerald-50">About EcoLife</a>
+        <a href="/sustainable-living.html" class="block px-3 py-2 rounded-md text-sm font-medium text-slate-700 hover:bg-emerald-50">Sustainable Living</a>
+        <a href="/waste-management.html" class="block px-3 py-2 rounded-md text-sm font-medium text-slate-700 hover:bg-emerald-50">Waste Management</a>
+        <a href="/recycling.html" class="block px-3 py-2 rounded-md text-sm font-medium text-slate-700 hover:bg-emerald-50">Recycling</a>
+        <a href="/renewable-energy.html" class="block px-3 py-2 rounded-md text-sm font-medium text-slate-700 hover:bg-emerald-50">Renewable Energy</a>
+        <a href="/sustainable-food.html" class="block px-3 py-2 rounded-md text-sm font-medium text-slate-700 hover:bg-emerald-50">Sustainable Food</a>
+        <a href="/eco-products.html" class="block px-3 py-2 rounded-md text-sm font-medium text-slate-700 hover:bg-emerald-50">Eco Products</a>
+        <a href="/green-tips.html" class="block px-3 py-2 rounded-md text-sm font-medium text-slate-700 hover:bg-emerald-50">Green Tips</a>
+        <a href="/gallery.html" class="block px-3 py-2 rounded-md text-sm font-medium text-slate-700 hover:bg-emerald-50">Gallery</a>
+        <a href="/contact.html" class="block px-3 py-2 rounded-md text-sm font-medium text-slate-700 hover:bg-emerald-50">Contact</a>
+      </div>
+    </header>
+
+    <main>
+      <!-- Hero -->
+      <section class="bg-gradient-to-r from-emerald-950 via-teal-900 to-emerald-900 text-white py-16 sm:py-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <span class="text-xs font-semibold uppercase tracking-wider text-emerald-300">Actionable Environmental Wisdom</span>
+          <h1 class="text-3xl sm:text-5xl font-extrabold tracking-tight mt-2 text-balance">
+            Actionable Green Tips & Habit Tracker
+          </h1>
+          <p class="mt-4 text-emerald-100/90 text-lg max-w-3xl leading-relaxed">
+            Tangible, low-friction habits that make living green straightforward and rewarding. Check off your daily actions below to measure your ecological impact in real time.
+          </p>
+        </div>
+      </section>
+
+      <!-- Interactive Daily Habit Tracker Section -->
+      <section id="tracker" class="py-12 bg-white border-b border-stone-200">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="p-6 sm:p-8 rounded-2xl bg-emerald-50/70 border border-emerald-200 shadow-sm">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6">
+              <div>
+                <span class="text-xs font-semibold uppercase tracking-wider text-emerald-800">Live Progress Meter</span>
+                <h3 class="text-2xl font-bold text-slate-900 mt-1">My Daily Eco-Habit Checklist</h3>
+                <p id="habit-progress-text" class="text-xs text-slate-600 mt-1">0 of 6 Eco-Habits Active (0%)</p>
+              </div>
+              <div class="self-start sm:self-auto">
+                <span id="habit-score-badge" class="inline-block px-3 py-1 text-xs font-bold rounded-lg bg-emerald-700 text-white shadow-xs">
+                  Getting Started
+                </span>
+              </div>
+            </div>
+
+            <!-- Progress Bar -->
+            <div class="w-full h-3 rounded-full bg-emerald-200/80 overflow-hidden mb-6">
+              <div id="habit-progress-bar" class="h-full bg-emerald-600 transition-all duration-300 w-0"></div>
+            </div>
+
+            <!-- Checkbox Items -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
+              <label class="flex items-start gap-3 p-3.5 rounded-xl bg-white border border-stone-200 cursor-pointer hover:border-emerald-500 transition-colors">
+                <input type="checkbox" class="habit-checkbox mt-1 w-4 h-4 rounded text-emerald-700 focus:ring-emerald-600" />
+                <span class="text-xs text-slate-700"><strong>Refused single-use plastic</strong> bottle, straw, or grocery bag today.</span>
+              </label>
+
+              <label class="flex items-start gap-3 p-3.5 rounded-xl bg-white border border-stone-200 cursor-pointer hover:border-emerald-500 transition-colors">
+                <input type="checkbox" class="habit-checkbox mt-1 w-4 h-4 rounded text-emerald-700 focus:ring-emerald-600" />
+                <span class="text-xs text-slate-700"><strong>Ate at least one plant-based meal</strong> (meat-free lunch or dinner).</span>
+              </label>
+
+              <label class="flex items-start gap-3 p-3.5 rounded-xl bg-white border border-stone-200 cursor-pointer hover:border-emerald-500 transition-colors">
+                <input type="checkbox" class="habit-checkbox mt-1 w-4 h-4 rounded text-emerald-700 focus:ring-emerald-600" />
+                <span class="text-xs text-slate-700"><strong>Turned off power strip / electronics</strong> to cut vampire power draw.</span>
+              </label>
+
+              <label class="flex items-start gap-3 p-3.5 rounded-xl bg-white border border-stone-200 cursor-pointer hover:border-emerald-500 transition-colors">
+                <input type="checkbox" class="habit-checkbox mt-1 w-4 h-4 rounded text-emerald-700 focus:ring-emerald-600" />
+                <span class="text-xs text-slate-700"><strong>Took a short shower (&le;5 min)</strong> or turned tap off while brushing teeth.</span>
+              </label>
+
+              <label class="flex items-start gap-3 p-3.5 rounded-xl bg-white border border-stone-200 cursor-pointer hover:border-emerald-500 transition-colors">
+                <input type="checkbox" class="habit-checkbox mt-1 w-4 h-4 rounded text-emerald-700 focus:ring-emerald-600" />
+                <span class="text-xs text-slate-700"><strong>Used active transit or carpooled</strong> (walked, biked, or took metro/bus).</span>
+              </label>
+
+              <label class="flex items-start gap-3 p-3.5 rounded-xl bg-white border border-stone-200 cursor-pointer hover:border-emerald-500 transition-colors">
+                <input type="checkbox" class="habit-checkbox mt-1 w-4 h-4 rounded text-emerald-700 focus:ring-emerald-600" />
+                <span class="text-xs text-slate-700"><strong>Segregated domestic waste</strong> into wet compostables and clean recyclables.</span>
+              </label>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 6 Themed Green Tips Categories -->
+      <section class="py-16 bg-[#faf9f6]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="text-center max-w-3xl mx-auto mb-14">
+            <span class="text-xs font-semibold uppercase tracking-wider text-emerald-800">Categorized Advice</span>
+            <h2 class="text-3xl font-bold text-slate-900 mt-2">Comprehensive Green Living Cards</h2>
+            <p class="text-slate-600 mt-3 text-base">Explore actionable steps by lifestyle domain.</p>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- 1. Daily Eco Habits -->
+            <div class="bg-white p-7 rounded-2xl border border-stone-200 shadow-xs flex flex-col justify-between">
+              <div>
+                <div class="w-12 h-12 rounded-xl bg-emerald-100 text-emerald-800 flex items-center justify-center text-2xl mb-4">☀️</div>
+                <h3 class="text-xl font-bold text-slate-900 mb-2">Daily Eco Habits</h3>
+                <ul class="text-xs text-slate-600 space-y-3">
+                  <li class="flex items-start gap-2">
+                    <span class="text-emerald-700 font-bold">•</span>
+                    <span><strong>Natural Air Circulation:</strong> Open windows across rooms for 15 minutes morning and evening to flush indoor pollutants instead of running continuous AC.</span>
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <span class="text-emerald-700 font-bold">•</span>
+                    <span><strong>Full Laundry Loads:</strong> Run washers only when full; this preserves up to 3,400 gallons of treated municipal water annually.</span>
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <span class="text-emerald-700 font-bold">•</span>
+                    <span><strong>Line Drying:</strong> Hang dry bedding and clothing on a clothesline to save 4 kg of carbon emissions per cycle.</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- 2. Energy Saving Tips -->
+            <div class="bg-white p-7 rounded-2xl border border-stone-200 shadow-xs flex flex-col justify-between">
+              <div>
+                <div class="w-12 h-12 rounded-xl bg-amber-100 text-amber-800 flex items-center justify-center text-2xl mb-4">⚡</div>
+                <h3 class="text-xl font-bold text-slate-900 mb-2">Energy-Saving Tips</h3>
+                <ul class="text-xs text-slate-600 space-y-3">
+                  <li class="flex items-start gap-2">
+                    <span class="text-amber-700 font-bold">•</span>
+                    <span><strong>Thermostat 1°C Shift:</strong> Lowering heating or raising cooling by just 1°C cuts electricity costs by 8%.</span>
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <span class="text-amber-700 font-bold">•</span>
+                    <span><strong>Clean Refrigerator Coils:</strong> Dusting coils once every 6 months boosts motor heat dissipation efficiency by 20%.</span>
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <span class="text-amber-700 font-bold">•</span>
+                    <span><strong>Smart Strip Kill-Switches:</strong> Eliminate standby power draw from TVs, audio consoles, and laptop power bricks.</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- 3. Water Saving Tips -->
+            <div class="bg-white p-7 rounded-2xl border border-stone-200 shadow-xs flex flex-col justify-between">
+              <div>
+                <div class="w-12 h-12 rounded-xl bg-blue-100 text-blue-800 flex items-center justify-center text-2xl mb-4">💧</div>
+                <h3 class="text-xl font-bold text-slate-900 mb-2">Water-Saving Tips</h3>
+                <ul class="text-xs text-slate-600 space-y-3">
+                  <li class="flex items-start gap-2">
+                    <span class="text-blue-700 font-bold">•</span>
+                    <span><strong>Dual-Flush Toilets:</strong> Retrofit single-flush toilet tanks with dual-flush valves or displacement bags to save 3 liters per flush.</span>
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <span class="text-blue-700 font-bold">•</span>
+                    <span><strong>Faucet Aerators:</strong> Screw 1.5 GPM aerators onto bathroom sinks to maintain water pressure while cutting volume by 35%.</span>
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <span class="text-blue-700 font-bold">•</span>
+                    <span><strong>Morning Plant Watering:</strong> Water garden greenery before 8:00 AM to prevent rapid midday solar evaporation.</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- 4. Plastic Reduction Tips -->
+            <div class="bg-white p-7 rounded-2xl border border-stone-200 shadow-xs flex flex-col justify-between">
+              <div>
+                <div class="w-12 h-12 rounded-xl bg-teal-100 text-teal-800 flex items-center justify-center text-2xl mb-4">🚫</div>
+                <h3 class="text-xl font-bold text-slate-900 mb-2">Plastic Reduction Tips</h3>
+                <ul class="text-xs text-slate-600 space-y-3">
+                  <li class="flex items-start gap-2">
+                    <span class="text-teal-700 font-bold">•</span>
+                    <span><strong>Shampoo & Conditioner Bars:</strong> Solid hair bars eliminate bulky HDPE plastic bottles and ship without heavy water weight.</span>
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <span class="text-teal-700 font-bold">•</span>
+                    <span><strong>Cotton Produce Bags:</strong> Carry lightweight mesh sacks for loose fruits and vegetables instead of plastic tear-sheets.</span>
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <span class="text-teal-700 font-bold">•</span>
+                    <span><strong>Stainless Safety Razors:</strong> Replace disposable plastic cartridge razors with a lifetime steel safety razor and recyclable blades.</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- 5. Sustainable Travel Tips -->
+            <div class="bg-white p-7 rounded-2xl border border-stone-200 shadow-xs flex flex-col justify-between">
+              <div>
+                <div class="w-12 h-12 rounded-xl bg-purple-100 text-purple-800 flex items-center justify-center text-2xl mb-4">🚆</div>
+                <h3 class="text-xl font-bold text-slate-900 mb-2">Sustainable Travel Tips</h3>
+                <ul class="text-xs text-slate-600 space-y-3">
+                  <li class="flex items-start gap-2">
+                    <span class="text-purple-700 font-bold">•</span>
+                    <span><strong>Pack Lighter:</strong> Every 10 pounds removed from luggage decreases aircraft and vehicle fuel consumption significantly.</span>
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <span class="text-purple-700 font-bold">•</span>
+                    <span><strong>Prioritize Rail Over Air:</strong> Passenger trains generate up to 80% fewer carbon emissions per passenger-kilometer than short regional flights.</span>
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <span class="text-purple-700 font-bold">•</span>
+                    <span><strong>Slow Tourism:</strong> Stay longer in one region, patronizing local farmers markets and family-run guesthouses.</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- 6. Study & Workspace Habits -->
+            <div class="bg-white p-7 rounded-2xl border border-stone-200 shadow-xs flex flex-col justify-between">
+              <div>
+                <div class="w-12 h-12 rounded-xl bg-rose-100 text-rose-800 flex items-center justify-center text-2xl mb-4">💻</div>
+                <h3 class="text-xl font-bold text-slate-900 mb-2">Sustainable Study & Work</h3>
+                <ul class="text-xs text-slate-600 space-y-3">
+                  <li class="flex items-start gap-2">
+                    <span class="text-rose-700 font-bold">•</span>
+                    <span><strong>Digital-First Notes:</strong> Annotate documents via digital stylus or reusable stone paper pads; print double-sided only when legally necessary.</span>
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <span class="text-rose-700 font-bold">•</span>
+                    <span><strong>Cloud Hygiene:</strong> Delete old large email attachments and video recordings—server data storage consumes vast cooling electricity.</span>
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <span class="text-rose-700 font-bold">•</span>
+                    <span><strong>Refurbished Tech:</strong> Purchase certified refurbished laptops and monitors; 80% of a computer's total carbon lifecycle is in manufacturing.</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Global Footer -->
+    <footer class="bg-emerald-950 text-emerald-100 pt-16 pb-12 border-t border-emerald-900">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 mb-12">
+          <div class="lg:col-span-2 space-y-4">
+            <a href="/index.html" class="flex items-center gap-2">
+              <span class="text-2xl">🌱</span>
+              <span class="text-2xl font-bold tracking-tight text-white">EcoLife</span>
+            </a>
+            <p class="text-emerald-200/80 text-sm leading-relaxed max-w-sm">
+              An open educational initiative dedicated to demystifying environmental science, promoting zero-waste lifestyles, and accelerating renewable energy adoption worldwide.
+            </p>
+            <p class="text-xs text-emerald-400 font-medium">Building a greener future, one choice at a time.</p>
+          </div>
+          <div>
+            <h4 class="text-sm font-semibold uppercase tracking-wider text-white mb-4">Quick Links</h4>
+            <ul class="space-y-2.5 text-sm text-emerald-200/80">
+              <li><a href="/index.html" class="hover:text-white transition-colors">Home</a></li>
+              <li><a href="/about.html" class="hover:text-white transition-colors">About EcoLife</a></li>
+              <li><a href="/sustainable-living.html" class="hover:text-white transition-colors">Sustainable Living</a></li>
+              <li><a href="/green-tips.html" class="hover:text-white transition-colors">Green Tips & Habits</a></li>
+              <li><a href="/gallery.html" class="hover:text-white transition-colors">Photo Gallery</a></li>
+              <li><a href="/contact.html" class="hover:text-white transition-colors">Contact</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="text-sm font-semibold uppercase tracking-wider text-white mb-4">Sustainability Topics</h4>
+            <ul class="space-y-2.5 text-sm text-emerald-200/80">
+              <li><a href="/waste-management.html" class="hover:text-white transition-colors">Waste Management</a></li>
+              <li><a href="/recycling.html" class="hover:text-white transition-colors">Recycling Timeline</a></li>
+              <li><a href="/renewable-energy.html" class="hover:text-white transition-colors">Renewable Energy</a></li>
+              <li><a href="/sustainable-food.html" class="hover:text-white transition-colors">Sustainable Food</a></li>
+              <li><a href="/eco-products.html" class="hover:text-white transition-colors">Eco-Friendly Products</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="text-sm font-semibold uppercase tracking-wider text-white mb-4">Get in Touch</h4>
+            <p class="text-xs text-emerald-200/80 leading-relaxed mb-3">
+              Environmental Education Hub<br />
+              100 Green Canopy Way, Suite 400<br />
+              info@ecolife-sustainability.org
+            </p>
+            <div class="flex items-center gap-3 text-lg pt-1">
+              <a href="#" aria-label="EcoLife Twitter" class="w-8 h-8 rounded-lg bg-emerald-900 text-emerald-300 hover:bg-emerald-800 hover:text-white flex items-center justify-center transition-colors">𝕏</a>
+              <a href="#" aria-label="EcoLife LinkedIn" class="w-8 h-8 rounded-lg bg-emerald-900 text-emerald-300 hover:bg-emerald-800 hover:text-white flex items-center justify-center transition-colors">in</a>
+              <a href="#" aria-label="EcoLife Instagram" class="w-8 h-8 rounded-lg bg-emerald-900 text-emerald-300 hover:bg-emerald-800 hover:text-white flex items-center justify-center transition-colors">📸</a>
+              <a href="#" aria-label="EcoLife GitHub" class="w-8 h-8 rounded-lg bg-emerald-900 text-emerald-300 hover:bg-emerald-800 hover:text-white flex items-center justify-center transition-colors">💻</a>
+            </div>
+          </div>
+        </div>
+        <div class="pt-8 border-t border-emerald-900/80 flex flex-col sm:flex-row items-center justify-between text-xs text-emerald-400/80 gap-4">
+          <p>© 2026 EcoLife. All Rights Reserved.</p>
+          <p>Building a greener future, one choice at a time.</p>
+        </div>
+      </div>
+    </footer>
+    <script src="/js/site.js"></script>
+    <script type="module" src="/src/site.js"></script>
+  </body>
+</html>

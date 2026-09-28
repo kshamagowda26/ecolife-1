@@ -1,0 +1,364 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sustainable Food – Local Produce, Plant-Forward Diet & Waste Reduction | EcoLife</title>
+    <meta name="description" content="Discover how eating seasonally, embracing plant-based proteins, and curbing household food waste directly restores ecosystems." />
+    <meta property="og:title" content="Sustainable Food & Mindful Nutrition – EcoLife" />
+    <meta property="og:description" content="Practical food sustainability guide: local sourcing, regenerative farming, and budget-friendly zero-waste kitchen tips." />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/src/index.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              forest: {
+                50: '#f1f9f4',
+                100: '#d8f3dc',
+                200: '#b7e4c7',
+                300: '#95d5b2',
+                400: '#74c69d',
+                500: '#52b788',
+                600: '#40916c',
+                700: '#2d6a4f',
+                800: '#1b4332',
+                900: '#0f291e',
+              }
+            }
+          }
+        }
+      }
+    </script>
+  </head>
+  <body class="bg-[#faf9f6] text-slate-800 antialiased selection:bg-emerald-200 selection:text-emerald-950">
+    <!-- Header -->
+    <header id="site-header" class="sticky top-0 z-50 transition-all duration-300 bg-white/90 backdrop-blur-md border-b border-emerald-950/10">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-20">
+          <a href="/index.html" class="flex items-center gap-3 group">
+            <div class="w-10 h-10 rounded-xl bg-emerald-800 text-emerald-100 flex items-center justify-center font-bold text-xl shadow-sm transition-transform group-hover:scale-105">🌱</div>
+            <div>
+              <span class="text-xl font-bold tracking-tight text-emerald-950">EcoLife</span>
+              <span class="block text-[11px] font-medium tracking-wider uppercase text-emerald-700">Sustainable Living</span>
+            </div>
+          </a>
+
+          <nav class="hidden lg:flex items-center gap-1 xl:gap-2">
+            <a href="/index.html" data-nav-link class="px-2.5 py-1.5 text-[13px] font-medium text-slate-700 hover:text-emerald-700 hover:bg-emerald-50/70 rounded-lg transition-colors whitespace-nowrap">Home</a>
+            <a href="/about.html" data-nav-link class="px-2.5 py-1.5 text-[13px] font-medium text-slate-700 hover:text-emerald-700 hover:bg-emerald-50/70 rounded-lg transition-colors whitespace-nowrap">About</a>
+            <a href="/sustainable-living.html" data-nav-link class="px-2.5 py-1.5 text-[13px] font-medium text-slate-700 hover:text-emerald-700 hover:bg-emerald-50/70 rounded-lg transition-colors whitespace-nowrap">Living</a>
+            <a href="/waste-management.html" data-nav-link class="px-2.5 py-1.5 text-[13px] font-medium text-slate-700 hover:text-emerald-700 hover:bg-emerald-50/70 rounded-lg transition-colors whitespace-nowrap">Waste</a>
+            <a href="/recycling.html" data-nav-link class="px-2.5 py-1.5 text-[13px] font-medium text-slate-700 hover:text-emerald-700 hover:bg-emerald-50/70 rounded-lg transition-colors whitespace-nowrap">Recycling</a>
+            <a href="/renewable-energy.html" data-nav-link class="px-2.5 py-1.5 text-[13px] font-medium text-slate-700 hover:text-emerald-700 hover:bg-emerald-50/70 rounded-lg transition-colors whitespace-nowrap">Renewable Energy</a>
+            <a href="/sustainable-food.html" data-nav-link class="px-2.5 py-1.5 text-[13px] font-medium text-slate-700 hover:text-emerald-700 hover:bg-emerald-50/70 rounded-lg transition-colors whitespace-nowrap">Food</a>
+            <a href="/eco-products.html" data-nav-link class="px-2.5 py-1.5 text-[13px] font-medium text-slate-700 hover:text-emerald-700 hover:bg-emerald-50/70 rounded-lg transition-colors whitespace-nowrap">Eco Products</a>
+            <a href="/green-tips.html" data-nav-link class="px-2.5 py-1.5 text-[13px] font-medium text-slate-700 hover:text-emerald-700 hover:bg-emerald-50/70 rounded-lg transition-colors whitespace-nowrap">Green Tips</a>
+            <a href="/gallery.html" data-nav-link class="px-2.5 py-1.5 text-[13px] font-medium text-slate-700 hover:text-emerald-700 hover:bg-emerald-50/70 rounded-lg transition-colors whitespace-nowrap">Gallery</a>
+            <a href="/contact.html" data-nav-link class="px-2.5 py-1.5 text-[13px] font-medium text-slate-700 hover:text-emerald-700 hover:bg-emerald-50/70 rounded-lg transition-colors whitespace-nowrap">Contact</a>
+          </nav>
+
+          <div class="flex items-center gap-3">
+            <a href="#tips" class="hidden sm:inline-flex items-center justify-center px-4 py-2 text-xs font-semibold text-white bg-emerald-800 rounded-lg hover:bg-emerald-700 shadow-sm transition-all whitespace-nowrap">
+              Kitchen Tips
+            </a>
+            <button id="mobile-menu-btn" type="button" aria-expanded="false" aria-label="Toggle navigation menu" class="lg:hidden p-2 rounded-lg text-slate-700 hover:bg-emerald-50">
+              <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div id="mobile-menu" class="hidden lg:hidden border-t border-slate-200 bg-white/95 px-4 pt-3 pb-6 space-y-1 shadow-xl">
+        <a href="/index.html" class="block px-3 py-2 rounded-md text-sm font-medium text-slate-700 hover:bg-emerald-50">Home</a>
+        <a href="/about.html" class="block px-3 py-2 rounded-md text-sm font-medium text-slate-700 hover:bg-emerald-50">About EcoLife</a>
+        <a href="/sustainable-living.html" class="block px-3 py-2 rounded-md text-sm font-medium text-slate-700 hover:bg-emerald-50">Sustainable Living</a>
+        <a href="/waste-management.html" class="block px-3 py-2 rounded-md text-sm font-medium text-slate-700 hover:bg-emerald-50">Waste Management</a>
+        <a href="/recycling.html" class="block px-3 py-2 rounded-md text-sm font-medium text-slate-700 hover:bg-emerald-50">Recycling</a>
+        <a href="/renewable-energy.html" class="block px-3 py-2 rounded-md text-sm font-medium text-slate-700 hover:bg-emerald-50">Renewable Energy</a>
+        <a href="/sustainable-food.html" class="block px-3 py-2 rounded-md text-sm font-medium text-slate-700 hover:bg-emerald-50">Sustainable Food</a>
+        <a href="/eco-products.html" class="block px-3 py-2 rounded-md text-sm font-medium text-slate-700 hover:bg-emerald-50">Eco Products</a>
+        <a href="/green-tips.html" class="block px-3 py-2 rounded-md text-sm font-medium text-slate-700 hover:bg-emerald-50">Green Tips</a>
+        <a href="/gallery.html" class="block px-3 py-2 rounded-md text-sm font-medium text-slate-700 hover:bg-emerald-50">Gallery</a>
+        <a href="/contact.html" class="block px-3 py-2 rounded-md text-sm font-medium text-slate-700 hover:bg-emerald-50">Contact</a>
+      </div>
+    </header>
+
+    <main>
+      <!-- Hero -->
+      <section class="bg-gradient-to-r from-emerald-950 via-green-900 to-teal-950 text-white py-16 sm:py-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <span class="text-xs font-semibold uppercase tracking-wider text-emerald-300">Regenerative Nutrition</span>
+          <h1 class="text-3xl sm:text-5xl font-extrabold tracking-tight mt-2 text-balance">
+            Sustainable Food Systems & Mindful Eating
+          </h1>
+          <p class="mt-4 text-emerald-100/90 text-lg max-w-3xl leading-relaxed">
+            The global food supply chain accounts for over 26% of human greenhouse gas emissions and 70% of freshwater withdrawals. Transforming how we eat is our most potent everyday climate action.
+          </p>
+        </div>
+      </section>
+
+      <!-- Visual Food Showcase -->
+      <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            <div class="lg:col-span-6">
+              <div class="rounded-2xl overflow-hidden shadow-xl border border-stone-200">
+                <img src="/src/assets/images/sustainable_organic_harvest_1790605649354.jpg" alt="Fresh organic local harvest in a rustic crate" class="w-full h-88 object-cover" />
+              </div>
+            </div>
+            <div class="lg:col-span-6 space-y-5">
+              <span class="text-xs font-semibold uppercase tracking-wider text-emerald-800">What is Sustainable Food?</span>
+              <h2 class="text-3xl font-bold text-slate-900 leading-tight">
+                Food Grown in Harmony With Soil, Seasons, and Communities
+              </h2>
+              <p class="text-slate-600 text-base leading-relaxed">
+                Sustainable food is produced, processed, distributed, and disposed of in ways that preserve natural ecological balance, ensure fair livelihoods for farmers, and avoid toxic synthetic pesticides that contaminate bee populations and water tables.
+              </p>
+              <div class="space-y-3 pt-2">
+                <div class="p-3.5 rounded-xl bg-emerald-50 border border-emerald-200 text-xs text-slate-700">
+                  <strong>Seasonal & Local:</strong> Eating food grown within 150 miles cuts long-haul refrigerated air transport emissions by up to 85%.
+                </div>
+                <div class="p-3.5 rounded-xl bg-emerald-50 border border-emerald-200 text-xs text-slate-700">
+                  <strong>Soil Health First:</strong> Cover cropping, compost addition, and zero-tillage trap tons of atmospheric carbon right back inside agricultural soils.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Dietary Footprint Comparison (Plant vs Animal) -->
+      <section class="py-16 bg-[#faf9f6] border-y border-stone-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="text-center max-w-3xl mx-auto mb-14">
+            <span class="text-xs font-semibold uppercase tracking-wider text-emerald-800">Ecological Comparison</span>
+            <h2 class="text-3xl font-bold text-slate-900 mt-2">The Environmental Cost of Protein</h2>
+            <p class="text-slate-600 mt-3 text-base">Embracing a plant-forward diet is the single highest-impact personal choice to slash freshwater depletion and land use.</p>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Beef -->
+            <div class="bg-white p-7 rounded-2xl border border-red-200 shadow-xs">
+              <div class="flex items-center justify-between mb-4">
+                <span class="text-2xl">🥩</span>
+                <span class="text-xs font-bold text-red-700 uppercase tracking-wide">High Impact</span>
+              </div>
+              <h3 class="text-xl font-bold text-slate-900 mb-1">Beef (Per 100g Protein)</h3>
+              <p class="text-xs text-slate-500 mb-4">Requires massive pasture clearing and emits methane.</p>
+              <div class="space-y-3 text-xs border-t border-slate-100 pt-4">
+                <div class="flex justify-between">
+                  <span class="text-slate-600">Greenhouse Gases:</span>
+                  <span class="font-bold text-red-600 tabular-nums">49.9 kg CO₂-eq</span>
+                </div>
+                <div class="flex justify-between">
+                  <span class="text-slate-600">Water Footprint:</span>
+                  <span class="font-bold text-red-600 tabular-nums">15,400 Liters/kg</span>
+                </div>
+                <div class="flex justify-between">
+                  <span class="text-slate-600">Land Usage:</span>
+                  <span class="font-bold text-red-600 tabular-nums">163 m²</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Poultry / Eggs -->
+            <div class="bg-white p-7 rounded-2xl border border-amber-200 shadow-xs">
+              <div class="flex items-center justify-between mb-4">
+                <span class="text-2xl">🍗</span>
+                <span class="text-xs font-bold text-amber-700 uppercase tracking-wide">Moderate Impact</span>
+              </div>
+              <h3 class="text-xl font-bold text-slate-900 mb-1">Poultry / Eggs</h3>
+              <p class="text-xs text-slate-500 mb-4">Significant feedgrain footprint but lower enteric methane.</p>
+              <div class="space-y-3 text-xs border-t border-slate-100 pt-4">
+                <div class="flex justify-between">
+                  <span class="text-slate-600">Greenhouse Gases:</span>
+                  <span class="font-bold text-amber-700 tabular-nums">5.7 kg CO₂-eq</span>
+                </div>
+                <div class="flex justify-between">
+                  <span class="text-slate-600">Water Footprint:</span>
+                  <span class="font-bold text-amber-700 tabular-nums">4,300 Liters/kg</span>
+                </div>
+                <div class="flex justify-between">
+                  <span class="text-slate-600">Land Usage:</span>
+                  <span class="font-bold text-amber-700 tabular-nums">7.1 m²</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Lentils / Legumes -->
+            <div class="bg-white p-7 rounded-2xl border border-emerald-300 shadow-xs bg-emerald-50/20">
+              <div class="flex items-center justify-between mb-4">
+                <span class="text-2xl">🫘</span>
+                <span class="text-xs font-bold text-emerald-800 uppercase tracking-wide">Lowest Impact</span>
+              </div>
+              <h3 class="text-xl font-bold text-slate-900 mb-1">Lentils, Beans & Peas</h3>
+              <p class="text-xs text-slate-500 mb-4">Fixes atmospheric nitrogen into soils naturally without synthetic fertilizer.</p>
+              <div class="space-y-3 text-xs border-t border-slate-100 pt-4">
+                <div class="flex justify-between">
+                  <span class="text-slate-600">Greenhouse Gases:</span>
+                  <span class="font-bold text-emerald-700 tabular-nums">0.9 kg CO₂-eq</span>
+                </div>
+                <div class="flex justify-between">
+                  <span class="text-slate-600">Water Footprint:</span>
+                  <span class="font-bold text-emerald-700 tabular-nums">1,250 Liters/kg</span>
+                </div>
+                <div class="flex justify-between">
+                  <span class="text-slate-600">Land Usage:</span>
+                  <span class="font-bold text-emerald-700 tabular-nums">3.4 m²</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Reducing Food Waste in the Kitchen -->
+      <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            <div class="lg:col-span-6 space-y-5">
+              <span class="text-xs font-semibold uppercase tracking-wider text-emerald-800">Zero-Waste Kitchen</span>
+              <h2 class="text-3xl font-bold text-slate-900 leading-tight">
+                Stop Food Waste Before It Reaches the Bin
+              </h2>
+              <p class="text-slate-600 text-base leading-relaxed">
+                If global food waste were a country, it would be the <strong>third-largest emitter of greenhouse gases</strong> on Earth. Up to 40% of discarded domestic food is edible produce that was simply forgotten in the crisper drawer.
+              </p>
+              <ul class="space-y-3 text-sm text-slate-700">
+                <li class="flex items-start gap-3">
+                  <span class="text-emerald-700 font-bold">•</span>
+                  <span><strong>The First-In, First-Out (FIFO) Rule:</strong> Keep older leftovers and opened jars at the front of your refrigerator.</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="text-emerald-700 font-bold">•</span>
+                  <span><strong>Embrace "Ugly" Produce:</strong> Crooked carrots and misshapen apples have identical nutrients and prevent on-farm dumping.</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="text-emerald-700 font-bold">•</span>
+                  <span><strong>Scrap Broth Freezing:</strong> Collect clean onion skins, carrot tips, and celery ends in a freezer bag to boil rich vegetable stock.</span>
+                </li>
+              </ul>
+            </div>
+            <div class="lg:col-span-6">
+              <div class="p-8 rounded-2xl bg-stone-100 border border-stone-300">
+                <h3 class="text-lg font-bold text-slate-900 mb-3">Sustainable Farming Philosophies</h3>
+                <div class="space-y-4 text-xs text-slate-600">
+                  <div>
+                    <h4 class="font-bold text-slate-800 text-sm">🌾 Regenerative Agriculture</h4>
+                    <p class="mt-1">Restores degraded soil microbiomes through multispecies grazing, diverse crop rotations, and zero synthetic biocides.</p>
+                  </div>
+                  <div>
+                    <h4 class="font-bold text-slate-800 text-sm">🌳 Agroforestry</h4>
+                    <p class="mt-1">Integrates fruit and nut trees alongside ground crops, mimicking natural woodland canopies for superior drought tolerance.</p>
+                  </div>
+                  <div>
+                    <h4 class="font-bold text-slate-800 text-sm">🌿 Permaculture</h4>
+                    <p class="mt-1">Closed-loop agricultural design where plant byproducts fertilize adjoining beds with zero external chemical inputs.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Practical Tips for Students and Families -->
+      <section id="tips" class="py-16 bg-[#f4ede4]/60 border-t border-stone-200">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="text-center mb-12">
+            <span class="text-xs font-semibold uppercase tracking-wider text-emerald-800">Everyday Nutrition</span>
+            <h2 class="text-3xl font-bold text-slate-900 mt-2">Practical Food Habits for Students & Families</h2>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="bg-white p-6 rounded-2xl border border-stone-200">
+              <h3 class="font-bold text-emerald-900 text-base mb-3 flex items-center gap-2">
+                <span>🎓</span> For Students on a Budget
+              </h3>
+              <ul class="text-xs text-slate-600 space-y-2.5">
+                <li>• <strong>Bulk Dry Staples:</strong> Brown rice, oats, lentils, and chickpeas cost less than $1/lb and provide complete essential proteins.</li>
+                <li>• <strong>Batch Cook Sundays:</strong> Prepare a 4-day curry, chili, or stew to avoid expensive and wasteful plastic-packaged takeout.</li>
+                <li>• <strong>Campus Farmers Market:</strong> Shop at local student co-ops and farmers stalls for seasonal vegetables at half supermarket prices.</li>
+              </ul>
+            </div>
+
+            <div class="bg-white p-6 rounded-2xl border border-stone-200">
+              <h3 class="font-bold text-emerald-900 text-base mb-3 flex items-center gap-2">
+                <span>🏡</span> For Families & Households
+              </h3>
+              <ul class="text-xs text-slate-600 space-y-2.5">
+                <li>• <strong>Weekly Meal Architecture:</strong> Plan 5 dinner menus on Friday, write a strict shopping list, and purchase only what is on it.</li>
+                <li>• <strong>Countertop Herb Gardening:</strong> Grow fresh basil, mint, and rosemary on sunny windowsills instead of buying plastic clamshells.</li>
+                <li>• <strong>Backyard Bokashi / Compost:</strong> Involve children in turning vegetable trimmings into dark loam for garden beds.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Global Footer -->
+    <footer class="bg-emerald-950 text-emerald-100 pt-16 pb-12 border-t border-emerald-900">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 mb-12">
+          <div class="lg:col-span-2 space-y-4">
+            <a href="/index.html" class="flex items-center gap-2">
+              <span class="text-2xl">🌱</span>
+              <span class="text-2xl font-bold tracking-tight text-white">EcoLife</span>
+            </a>
+            <p class="text-emerald-200/80 text-sm leading-relaxed max-w-sm">
+              An open educational initiative dedicated to demystifying environmental science, promoting zero-waste lifestyles, and accelerating renewable energy adoption worldwide.
+            </p>
+            <p class="text-xs text-emerald-400 font-medium">Building a greener future, one choice at a time.</p>
+          </div>
+          <div>
+            <h4 class="text-sm font-semibold uppercase tracking-wider text-white mb-4">Quick Links</h4>
+            <ul class="space-y-2.5 text-sm text-emerald-200/80">
+              <li><a href="/index.html" class="hover:text-white transition-colors">Home</a></li>
+              <li><a href="/about.html" class="hover:text-white transition-colors">About EcoLife</a></li>
+              <li><a href="/sustainable-living.html" class="hover:text-white transition-colors">Sustainable Living</a></li>
+              <li><a href="/green-tips.html" class="hover:text-white transition-colors">Green Tips & Habits</a></li>
+              <li><a href="/gallery.html" class="hover:text-white transition-colors">Photo Gallery</a></li>
+              <li><a href="/contact.html" class="hover:text-white transition-colors">Contact</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="text-sm font-semibold uppercase tracking-wider text-white mb-4">Sustainability Topics</h4>
+            <ul class="space-y-2.5 text-sm text-emerald-200/80">
+              <li><a href="/waste-management.html" class="hover:text-white transition-colors">Waste Management</a></li>
+              <li><a href="/recycling.html" class="hover:text-white transition-colors">Recycling Timeline</a></li>
+              <li><a href="/renewable-energy.html" class="hover:text-white transition-colors">Renewable Energy</a></li>
+              <li><a href="/sustainable-food.html" class="hover:text-white transition-colors">Sustainable Food</a></li>
+              <li><a href="/eco-products.html" class="hover:text-white transition-colors">Eco-Friendly Products</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="text-sm font-semibold uppercase tracking-wider text-white mb-4">Get in Touch</h4>
+            <p class="text-xs text-emerald-200/80 leading-relaxed mb-3">
+              Environmental Education Hub<br />
+              100 Green Canopy Way, Suite 400<br />
+              info@ecolife-sustainability.org
+            </p>
+            <div class="flex items-center gap-3 text-lg pt-1">
+              <a href="#" aria-label="EcoLife Twitter" class="w-8 h-8 rounded-lg bg-emerald-900 text-emerald-300 hover:bg-emerald-800 hover:text-white flex items-center justify-center transition-colors">𝕏</a>
+              <a href="#" aria-label="EcoLife LinkedIn" class="w-8 h-8 rounded-lg bg-emerald-900 text-emerald-300 hover:bg-emerald-800 hover:text-white flex items-center justify-center transition-colors">in</a>
+              <a href="#" aria-label="EcoLife Instagram" class="w-8 h-8 rounded-lg bg-emerald-900 text-emerald-300 hover:bg-emerald-800 hover:text-white flex items-center justify-center transition-colors">📸</a>
+              <a href="#" aria-label="EcoLife GitHub" class="w-8 h-8 rounded-lg bg-emerald-900 text-emerald-300 hover:bg-emerald-800 hover:text-white flex items-center justify-center transition-colors">💻</a>
+            </div>
+          </div>
+        </div>
+        <div class="pt-8 border-t border-emerald-900/80 flex flex-col sm:flex-row items-center justify-between text-xs text-emerald-400/80 gap-4">
+          <p>© 2026 EcoLife. All Rights Reserved.</p>
+          <p>Building a greener future, one choice at a time.</p>
+        </div>
+      </div>
+    </footer>
+    <script src="/js/site.js"></script>
+    <script type="module" src="/src/site.js"></script>
+  </body>
+</html>

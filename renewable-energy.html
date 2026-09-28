@@ -1,0 +1,370 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Renewable Energy – Solar, Wind, Hydro, Geothermal & Clean Future | EcoLife</title>
+    <meta name="description" content="Explore clean renewable energy sources—solar, wind, hydropower, geothermal, biomass—and calculate your household carbon savings." />
+    <meta property="og:title" content="Renewable Energy Technologies & Calculator – EcoLife" />
+    <meta property="og:description" content="Discover zero-emission power generation and test our interactive solar electricity & carbon offset estimator." />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/src/index.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              forest: {
+                50: '#f1f9f4',
+                100: '#d8f3dc',
+                200: '#b7e4c7',
+                300: '#95d5b2',
+                400: '#74c69d',
+                500: '#52b788',
+                600: '#40916c',
+                700: '#2d6a4f',
+                800: '#1b4332',
+                900: '#0f291e',
+              }
+            }
+          }
+        }
+      }
+    </script>
+  </head>
+  <body class="bg-[#faf9f6] text-slate-800 antialiased selection:bg-emerald-200 selection:text-emerald-950">
+    <!-- Header -->
+    <header id="site-header" class="sticky top-0 z-50 transition-all duration-300 bg-white/90 backdrop-blur-md border-b border-emerald-950/10">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-20">
+          <a href="/index.html" class="flex items-center gap-3 group">
+            <div class="w-10 h-10 rounded-xl bg-emerald-800 text-emerald-100 flex items-center justify-center font-bold text-xl shadow-sm transition-transform group-hover:scale-105">🌱</div>
+            <div>
+              <span class="text-xl font-bold tracking-tight text-emerald-950">EcoLife</span>
+              <span class="block text-[11px] font-medium tracking-wider uppercase text-emerald-700">Sustainable Living</span>
+            </div>
+          </a>
+
+          <nav class="hidden lg:flex items-center gap-1 xl:gap-2">
+            <a href="/index.html" data-nav-link class="px-2.5 py-1.5 text-[13px] font-medium text-slate-700 hover:text-emerald-700 hover:bg-emerald-50/70 rounded-lg transition-colors whitespace-nowrap">Home</a>
+            <a href="/about.html" data-nav-link class="px-2.5 py-1.5 text-[13px] font-medium text-slate-700 hover:text-emerald-700 hover:bg-emerald-50/70 rounded-lg transition-colors whitespace-nowrap">About</a>
+            <a href="/sustainable-living.html" data-nav-link class="px-2.5 py-1.5 text-[13px] font-medium text-slate-700 hover:text-emerald-700 hover:bg-emerald-50/70 rounded-lg transition-colors whitespace-nowrap">Living</a>
+            <a href="/waste-management.html" data-nav-link class="px-2.5 py-1.5 text-[13px] font-medium text-slate-700 hover:text-emerald-700 hover:bg-emerald-50/70 rounded-lg transition-colors whitespace-nowrap">Waste</a>
+            <a href="/recycling.html" data-nav-link class="px-2.5 py-1.5 text-[13px] font-medium text-slate-700 hover:text-emerald-700 hover:bg-emerald-50/70 rounded-lg transition-colors whitespace-nowrap">Recycling</a>
+            <a href="/renewable-energy.html" data-nav-link class="px-2.5 py-1.5 text-[13px] font-medium text-slate-700 hover:text-emerald-700 hover:bg-emerald-50/70 rounded-lg transition-colors whitespace-nowrap">Renewable Energy</a>
+            <a href="/sustainable-food.html" data-nav-link class="px-2.5 py-1.5 text-[13px] font-medium text-slate-700 hover:text-emerald-700 hover:bg-emerald-50/70 rounded-lg transition-colors whitespace-nowrap">Food</a>
+            <a href="/eco-products.html" data-nav-link class="px-2.5 py-1.5 text-[13px] font-medium text-slate-700 hover:text-emerald-700 hover:bg-emerald-50/70 rounded-lg transition-colors whitespace-nowrap">Eco Products</a>
+            <a href="/green-tips.html" data-nav-link class="px-2.5 py-1.5 text-[13px] font-medium text-slate-700 hover:text-emerald-700 hover:bg-emerald-50/70 rounded-lg transition-colors whitespace-nowrap">Green Tips</a>
+            <a href="/gallery.html" data-nav-link class="px-2.5 py-1.5 text-[13px] font-medium text-slate-700 hover:text-emerald-700 hover:bg-emerald-50/70 rounded-lg transition-colors whitespace-nowrap">Gallery</a>
+            <a href="/contact.html" data-nav-link class="px-2.5 py-1.5 text-[13px] font-medium text-slate-700 hover:text-emerald-700 hover:bg-emerald-50/70 rounded-lg transition-colors whitespace-nowrap">Contact</a>
+          </nav>
+
+          <div class="flex items-center gap-3">
+            <a href="#calculator" class="hidden sm:inline-flex items-center justify-center px-4 py-2 text-xs font-semibold text-white bg-emerald-800 rounded-lg hover:bg-emerald-700 shadow-sm transition-all whitespace-nowrap">
+              Energy Calculator
+            </a>
+            <button id="mobile-menu-btn" type="button" aria-expanded="false" aria-label="Toggle navigation menu" class="lg:hidden p-2 rounded-lg text-slate-700 hover:bg-emerald-50">
+              <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div id="mobile-menu" class="hidden lg:hidden border-t border-slate-200 bg-white/95 px-4 pt-3 pb-6 space-y-1 shadow-xl">
+        <a href="/index.html" class="block px-3 py-2 rounded-md text-sm font-medium text-slate-700 hover:bg-emerald-50">Home</a>
+        <a href="/about.html" class="block px-3 py-2 rounded-md text-sm font-medium text-slate-700 hover:bg-emerald-50">About EcoLife</a>
+        <a href="/sustainable-living.html" class="block px-3 py-2 rounded-md text-sm font-medium text-slate-700 hover:bg-emerald-50">Sustainable Living</a>
+        <a href="/waste-management.html" class="block px-3 py-2 rounded-md text-sm font-medium text-slate-700 hover:bg-emerald-50">Waste Management</a>
+        <a href="/recycling.html" class="block px-3 py-2 rounded-md text-sm font-medium text-slate-700 hover:bg-emerald-50">Recycling</a>
+        <a href="/renewable-energy.html" class="block px-3 py-2 rounded-md text-sm font-medium text-slate-700 hover:bg-emerald-50">Renewable Energy</a>
+        <a href="/sustainable-food.html" class="block px-3 py-2 rounded-md text-sm font-medium text-slate-700 hover:bg-emerald-50">Sustainable Food</a>
+        <a href="/eco-products.html" class="block px-3 py-2 rounded-md text-sm font-medium text-slate-700 hover:bg-emerald-50">Eco Products</a>
+        <a href="/green-tips.html" class="block px-3 py-2 rounded-md text-sm font-medium text-slate-700 hover:bg-emerald-50">Green Tips</a>
+        <a href="/gallery.html" class="block px-3 py-2 rounded-md text-sm font-medium text-slate-700 hover:bg-emerald-50">Gallery</a>
+        <a href="/contact.html" class="block px-3 py-2 rounded-md text-sm font-medium text-slate-700 hover:bg-emerald-50">Contact</a>
+      </div>
+    </header>
+
+    <main>
+      <!-- Hero -->
+      <section class="bg-gradient-to-r from-emerald-950 via-teal-950 to-slate-900 text-white py-16 sm:py-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <span class="text-xs font-semibold uppercase tracking-wider text-emerald-300">Clean Energy Transition</span>
+          <h1 class="text-3xl sm:text-5xl font-extrabold tracking-tight mt-2 text-balance">
+            Powering the Future With Renewable Energy
+          </h1>
+          <p class="mt-4 text-emerald-100/90 text-lg max-w-3xl leading-relaxed">
+            Harnessing inexhaustible elemental forces—sun, wind, water, and geothermal earth heat—to displace carbon-intensive coal and fossil fuels permanently.
+          </p>
+        </div>
+      </section>
+
+      <!-- Visual Showcase Banner -->
+      <section class="relative h-72 sm:h-96 w-full overflow-hidden">
+        <img src="/src/assets/images/renewable_solar_wind_1790605618817.jpg" alt="Pristine solar photovoltaic farm with modern wind turbines in background" class="w-full h-full object-cover" />
+        <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent flex items-end">
+          <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-8 text-white w-full">
+            <span class="text-xs font-semibold tracking-wider uppercase text-emerald-300">Infinite Energy Potential</span>
+            <p class="text-xl sm:text-2xl font-bold mt-1">Enough sunlight strikes the Earth in 90 minutes to power all human activity for an entire year.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- The 5 Primary Clean Energy Sources -->
+      <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="text-center max-w-3xl mx-auto mb-14">
+            <span class="text-xs font-semibold uppercase tracking-wider text-emerald-800">Technological Pillars</span>
+            <h2 class="text-3xl font-bold text-slate-900 mt-2">The Five Core Renewable Sources</h2>
+            <p class="text-slate-600 mt-3 text-base">Each technology offers distinct geographic strengths and baseload capabilities.</p>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- 1. Solar Energy -->
+            <div class="bg-amber-50/50 p-7 rounded-2xl border border-amber-200/80 flex flex-col justify-between">
+              <div>
+                <div class="w-12 h-12 rounded-xl bg-amber-500 text-white flex items-center justify-center text-2xl mb-4">☀️</div>
+                <h3 class="text-xl font-bold text-slate-900 mb-2">Solar Energy (Photovoltaic)</h3>
+                <p class="text-sm text-slate-600 leading-relaxed mb-4">
+                  Silicon semiconductor wafers convert photon packets directly into DC electricity. Rooftop panels and utility-scale solar farms provide decentralised resilience.
+                </p>
+                <div class="text-xs text-slate-700 space-y-1">
+                  <p><strong>Efficiency:</strong> Commercial panels now reach 21–24%.</p>
+                  <p><strong>Lifetime:</strong> 25–30+ years with negligible maintenance.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- 2. Wind Energy -->
+            <div class="bg-blue-50/50 p-7 rounded-2xl border border-blue-200/80 flex flex-col justify-between">
+              <div>
+                <div class="w-12 h-12 rounded-xl bg-blue-500 text-white flex items-center justify-center text-2xl mb-4">💨</div>
+                <h3 class="text-xl font-bold text-slate-900 mb-2">Wind Energy</h3>
+                <p class="text-sm text-slate-600 leading-relaxed mb-4">
+                  Aerodynamic composite turbine blades drive high-ratio gearboxes or direct-drive alternators. Offshore winds offer strong, consistent capacity factors above 50%.
+                </p>
+                <div class="text-xs text-slate-700 space-y-1">
+                  <p><strong>Capacity:</strong> Modern offshore turbines generate 14–16 MW each.</p>
+                  <p><strong>Footprint:</strong> Co-exists with agricultural grazing lands.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- 3. Hydropower -->
+            <div class="bg-cyan-50/50 p-7 rounded-2xl border border-cyan-200/80 flex flex-col justify-between">
+              <div>
+                <div class="w-12 h-12 rounded-xl bg-cyan-600 text-white flex items-center justify-center text-2xl mb-4">🌊</div>
+                <h3 class="text-xl font-bold text-slate-900 mb-2">Hydropower</h3>
+                <p class="text-sm text-slate-600 leading-relaxed mb-4">
+                  Harnesses kinetic energy from flowing rivers and reservoir head pressure through hydraulic turbines. Provides instantaneous load balancing and grid storage.
+                </p>
+                <div class="text-xs text-slate-700 space-y-1">
+                  <p><strong>Pumped Hydro:</strong> World’s largest energy storage battery.</p>
+                  <p><strong>Run-of-River:</strong> Low environmental impact on fish habitats.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- 4. Biomass Energy -->
+            <div class="bg-emerald-50/50 p-7 rounded-2xl border border-emerald-200/80 flex flex-col justify-between">
+              <div>
+                <div class="w-12 h-12 rounded-xl bg-emerald-600 text-white flex items-center justify-center text-2xl mb-4">🌿</div>
+                <h3 class="text-xl font-bold text-slate-900 mb-2">Biomass & Bioenergy</h3>
+                <p class="text-sm text-slate-600 leading-relaxed mb-4">
+                  Converts agricultural residues, forestry waste, and bio-methane from wastewater into heat, green gas, and sustainable aviation fuels.
+                </p>
+                <div class="text-xs text-slate-700 space-y-1">
+                  <p><strong>Circular:</strong> Utilizes organic waste streams otherwise dumped.</p>
+                  <p><strong>Baseload:</strong> Can run continuously regardless of weather.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- 5. Geothermal Energy -->
+            <div class="bg-rose-50/50 p-7 rounded-2xl border border-rose-200/80 flex flex-col justify-between">
+              <div>
+                <div class="w-12 h-12 rounded-xl bg-rose-600 text-white flex items-center justify-center text-2xl mb-4">🌋</div>
+                <h3 class="text-xl font-bold text-slate-900 mb-2">Geothermal Energy</h3>
+                <p class="text-sm text-slate-600 leading-relaxed mb-4">
+                  Taps subterranean steam and superheated brine from tectonic fissures miles underground to spin steam turbines 24/7/365 with zero fuel combustion.
+                </p>
+                <div class="text-xs text-slate-700 space-y-1">
+                  <p><strong>Reliability:</strong> 95%+ capacity factor (ideal baseload).</p>
+                  <p><strong>Heat Pumps:</strong> Shallow geothermal heats buildings efficiently.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- 6. Future Grid Integration -->
+            <div class="bg-gradient-to-br from-emerald-800 to-teal-950 text-white p-7 rounded-2xl flex flex-col justify-between">
+              <div>
+                <div class="w-12 h-12 rounded-xl bg-white/10 text-emerald-200 flex items-center justify-center text-2xl mb-4">🔋</div>
+                <h3 class="text-xl font-bold text-white mb-2">Smart Grid & Battery Storage</h3>
+                <p class="text-sm text-emerald-100/90 leading-relaxed mb-4">
+                  Large utility-scale lithium iron phosphate (LFP) and sodium-ion battery arrays capture daytime solar peaks and night wind surges for on-demand dispatch.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Interactive Solar & Carbon Savings Calculator -->
+      <section id="calculator" class="py-16 bg-[#faf9f6] border-y border-stone-200">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="bg-white p-8 rounded-2xl border border-stone-200 shadow-md">
+            <div class="flex items-center gap-3 mb-6">
+              <span class="text-2xl">⚡</span>
+              <div>
+                <h3 class="text-xl font-bold text-slate-900">Residential Solar & Carbon Savings Estimator</h3>
+                <p class="text-xs text-slate-500">Estimate how much money and atmospheric CO₂ a rooftop solar array can offset.</p>
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label for="calc-monthly-bill" class="block text-xs font-semibold text-slate-700 mb-1">Average Monthly Electric Bill ($)</label>
+                <input id="calc-monthly-bill" type="number" value="140" min="20" max="1500" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 text-sm focus:outline-none focus:ring-2 focus:ring-emerald-700" />
+              </div>
+              <div>
+                <label for="calc-roof-area" class="block text-xs font-semibold text-slate-700 mb-1">Estimated Roof Space (sq. ft.)</label>
+                <input id="calc-roof-area" type="number" value="450" min="100" max="5000" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 text-sm focus:outline-none focus:ring-2 focus:ring-emerald-700" />
+              </div>
+            </div>
+
+            <button id="calc-submit-btn" type="button" class="w-full mt-5 py-3 bg-emerald-800 hover:bg-emerald-700 text-white text-sm font-semibold rounded-xl transition-colors">
+              Calculate Energy & Carbon Impact
+            </button>
+
+            <!-- Results Output -->
+            <div id="calc-results" class="hidden mt-6 pt-6 border-t border-slate-100">
+              <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 text-center">
+                <div class="p-3 rounded-xl bg-emerald-50">
+                  <p class="text-xs text-emerald-800 font-semibold uppercase">System Size</p>
+                  <p id="res-system-size" class="text-lg font-extrabold text-emerald-950 mt-1 tabular-nums">--</p>
+                </div>
+                <div class="p-3 rounded-xl bg-emerald-50">
+                  <p class="text-xs text-emerald-800 font-semibold uppercase">Est. Annual Savings</p>
+                  <p id="res-money-saved" class="text-lg font-extrabold text-emerald-950 mt-1 tabular-nums">--</p>
+                </div>
+                <div class="p-3 rounded-xl bg-blue-50">
+                  <p class="text-xs text-blue-800 font-semibold uppercase">CO₂ Offset</p>
+                  <p id="res-carbon-saved" class="text-lg font-extrabold text-blue-950 mt-1 tabular-nums">--</p>
+                </div>
+                <div class="p-3 rounded-xl bg-amber-50">
+                  <p class="text-xs text-amber-800 font-semibold uppercase">Tree Equivalent</p>
+                  <p id="res-trees-saved" class="text-lg font-extrabold text-amber-950 mt-1 tabular-nums">--</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Benefits & Future of Clean Energy -->
+      <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            <div class="lg:col-span-6 space-y-5">
+              <span class="text-xs font-semibold uppercase tracking-wider text-emerald-800">Socioeconomic Transformation</span>
+              <h2 class="text-3xl font-bold text-slate-900 leading-tight">
+                The Triple Dividend: Climate, Health, and Economy
+              </h2>
+              <p class="text-slate-600 text-base leading-relaxed">
+                The transition to 100% renewable energy isn't just about curbing greenhouse gases—it brings immense health and economic benefits by eliminating toxic particulate soot (PM2.5) that causes over 5 million respiratory deaths per year.
+              </p>
+              <div class="space-y-3 text-sm text-slate-700">
+                <div class="flex items-start gap-3">
+                  <span class="w-5 h-5 rounded-full bg-emerald-100 text-emerald-800 flex items-center justify-center font-bold text-xs shrink-0 mt-0.5">✓</span>
+                  <span><strong>Zero Fuel Risk:</strong> Unlike volatile oil and natural gas markets, solar radiation and wind are free, stabilizing power pricing forever.</span>
+                </div>
+                <div class="flex items-start gap-3">
+                  <span class="w-5 h-5 rounded-full bg-emerald-100 text-emerald-800 flex items-center justify-center font-bold text-xs shrink-0 mt-0.5">✓</span>
+                  <span><strong>Massive Job Creation:</strong> The clean energy sector employs 3x more workers per megawatt-hour generated than legacy coal mining.</span>
+                </div>
+                <div class="flex items-start gap-3">
+                  <span class="w-5 h-5 rounded-full bg-emerald-100 text-emerald-800 flex items-center justify-center font-bold text-xs shrink-0 mt-0.5">✓</span>
+                  <span><strong>Water Preservation:</strong> Traditional thermal coal and nuclear plants consume billions of gallons of river water for cooling; solar PV uses zero water during operation.</span>
+                </div>
+              </div>
+            </div>
+            <div class="lg:col-span-6">
+              <div class="p-8 rounded-2xl bg-gradient-to-br from-slate-900 to-emerald-950 text-white">
+                <h3 class="text-xl font-bold text-emerald-300 mb-4">The 2050 Clean Energy Horizon</h3>
+                <p class="text-sm text-emerald-100/90 leading-relaxed mb-6">
+                  According to the International Energy Agency (IEA), reaching net-zero carbon requires renewable sources to supply 90% of global electricity by 2050, accompanied by a 4-fold increase in cross-border high-voltage DC supergrids.
+                </p>
+                <div class="pt-4 border-t border-emerald-800/80 flex items-center justify-between text-xs text-emerald-300">
+                  <span>IEA Net-Zero Energy Roadmap</span>
+                  <span>Validated Climate Metric</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Global Footer -->
+    <footer class="bg-emerald-950 text-emerald-100 pt-16 pb-12 border-t border-emerald-900">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 mb-12">
+          <div class="lg:col-span-2 space-y-4">
+            <a href="/index.html" class="flex items-center gap-2">
+              <span class="text-2xl">🌱</span>
+              <span class="text-2xl font-bold tracking-tight text-white">EcoLife</span>
+            </a>
+            <p class="text-emerald-200/80 text-sm leading-relaxed max-w-sm">
+              An open educational initiative dedicated to demystifying environmental science, promoting zero-waste lifestyles, and accelerating renewable energy adoption worldwide.
+            </p>
+            <p class="text-xs text-emerald-400 font-medium">Building a greener future, one choice at a time.</p>
+          </div>
+          <div>
+            <h4 class="text-sm font-semibold uppercase tracking-wider text-white mb-4">Quick Links</h4>
+            <ul class="space-y-2.5 text-sm text-emerald-200/80">
+              <li><a href="/index.html" class="hover:text-white transition-colors">Home</a></li>
+              <li><a href="/about.html" class="hover:text-white transition-colors">About EcoLife</a></li>
+              <li><a href="/sustainable-living.html" class="hover:text-white transition-colors">Sustainable Living</a></li>
+              <li><a href="/green-tips.html" class="hover:text-white transition-colors">Green Tips & Habits</a></li>
+              <li><a href="/gallery.html" class="hover:text-white transition-colors">Photo Gallery</a></li>
+              <li><a href="/contact.html" class="hover:text-white transition-colors">Contact</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="text-sm font-semibold uppercase tracking-wider text-white mb-4">Sustainability Topics</h4>
+            <ul class="space-y-2.5 text-sm text-emerald-200/80">
+              <li><a href="/waste-management.html" class="hover:text-white transition-colors">Waste Management</a></li>
+              <li><a href="/recycling.html" class="hover:text-white transition-colors">Recycling Timeline</a></li>
+              <li><a href="/renewable-energy.html" class="hover:text-white transition-colors">Renewable Energy</a></li>
+              <li><a href="/sustainable-food.html" class="hover:text-white transition-colors">Sustainable Food</a></li>
+              <li><a href="/eco-products.html" class="hover:text-white transition-colors">Eco-Friendly Products</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="text-sm font-semibold uppercase tracking-wider text-white mb-4">Get in Touch</h4>
+            <p class="text-xs text-emerald-200/80 leading-relaxed mb-3">
+              Environmental Education Hub<br />
+              100 Green Canopy Way, Suite 400<br />
+              info@ecolife-sustainability.org
+            </p>
+            <div class="flex items-center gap-3 text-lg pt-1">
+              <a href="#" aria-label="EcoLife Twitter" class="w-8 h-8 rounded-lg bg-emerald-900 text-emerald-300 hover:bg-emerald-800 hover:text-white flex items-center justify-center transition-colors">𝕏</a>
+              <a href="#" aria-label="EcoLife LinkedIn" class="w-8 h-8 rounded-lg bg-emerald-900 text-emerald-300 hover:bg-emerald-800 hover:text-white flex items-center justify-center transition-colors">in</a>
+              <a href="#" aria-label="EcoLife Instagram" class="w-8 h-8 rounded-lg bg-emerald-900 text-emerald-300 hover:bg-emerald-800 hover:text-white flex items-center justify-center transition-colors">📸</a>
+              <a href="#" aria-label="EcoLife GitHub" class="w-8 h-8 rounded-lg bg-emerald-900 text-emerald-300 hover:bg-emerald-800 hover:text-white flex items-center justify-center transition-colors">💻</a>
+            </div>
+          </div>
+        </div>
+        <div class="pt-8 border-t border-emerald-900/80 flex flex-col sm:flex-row items-center justify-between text-xs text-emerald-400/80 gap-4">
+          <p>© 2026 EcoLife. All Rights Reserved.</p>
+          <p>Building a greener future, one choice at a time.</p>
+        </div>
+      </div>
+    </footer>
+    <script src="/js/site.js"></script>
+    <script type="module" src="/src/site.js"></script>
+  </body>
+</html>

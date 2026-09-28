@@ -1,0 +1,426 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Recycling Guide – Materials, Lifecycle Timeline & Common Mistakes | EcoLife</title>
+    <meta name="description" content="Discover what materials can be recycled, explore the step-by-step recycling timeline, and learn how to prevent wishcycling." />
+    <meta property="og:title" content="Recycling Guide & Closed-Loop Timeline – EcoLife" />
+    <meta property="og:description" content="A comprehensive guide to recycling metals, glass, paper, and polymers. Interactive materials filter and step-by-step timeline." />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/src/index.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              forest: {
+                50: '#f1f9f4',
+                100: '#d8f3dc',
+                200: '#b7e4c7',
+                300: '#95d5b2',
+                400: '#74c69d',
+                500: '#52b788',
+                600: '#40916c',
+                700: '#2d6a4f',
+                800: '#1b4332',
+                900: '#0f291e',
+              }
+            }
+          }
+        }
+      }
+    </script>
+  </head>
+  <body class="bg-[#faf9f6] text-slate-800 antialiased selection:bg-emerald-200 selection:text-emerald-950">
+    <!-- Header -->
+    <header id="site-header" class="sticky top-0 z-50 transition-all duration-300 bg-white/90 backdrop-blur-md border-b border-emerald-950/10">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-20">
+          <a href="/index.html" class="flex items-center gap-3 group">
+            <div class="w-10 h-10 rounded-xl bg-emerald-800 text-emerald-100 flex items-center justify-center font-bold text-xl shadow-sm transition-transform group-hover:scale-105">🌱</div>
+            <div>
+              <span class="text-xl font-bold tracking-tight text-emerald-950">EcoLife</span>
+              <span class="block text-[11px] font-medium tracking-wider uppercase text-emerald-700">Sustainable Living</span>
+            </div>
+          </a>
+
+          <nav class="hidden lg:flex items-center gap-1 xl:gap-2">
+            <a href="/index.html" data-nav-link class="px-2.5 py-1.5 text-[13px] font-medium text-slate-700 hover:text-emerald-700 hover:bg-emerald-50/70 rounded-lg transition-colors whitespace-nowrap">Home</a>
+            <a href="/about.html" data-nav-link class="px-2.5 py-1.5 text-[13px] font-medium text-slate-700 hover:text-emerald-700 hover:bg-emerald-50/70 rounded-lg transition-colors whitespace-nowrap">About</a>
+            <a href="/sustainable-living.html" data-nav-link class="px-2.5 py-1.5 text-[13px] font-medium text-slate-700 hover:text-emerald-700 hover:bg-emerald-50/70 rounded-lg transition-colors whitespace-nowrap">Living</a>
+            <a href="/waste-management.html" data-nav-link class="px-2.5 py-1.5 text-[13px] font-medium text-slate-700 hover:text-emerald-700 hover:bg-emerald-50/70 rounded-lg transition-colors whitespace-nowrap">Waste</a>
+            <a href="/recycling.html" data-nav-link class="px-2.5 py-1.5 text-[13px] font-medium text-slate-700 hover:text-emerald-700 hover:bg-emerald-50/70 rounded-lg transition-colors whitespace-nowrap">Recycling</a>
+            <a href="/renewable-energy.html" data-nav-link class="px-2.5 py-1.5 text-[13px] font-medium text-slate-700 hover:text-emerald-700 hover:bg-emerald-50/70 rounded-lg transition-colors whitespace-nowrap">Renewable Energy</a>
+            <a href="/sustainable-food.html" data-nav-link class="px-2.5 py-1.5 text-[13px] font-medium text-slate-700 hover:text-emerald-700 hover:bg-emerald-50/70 rounded-lg transition-colors whitespace-nowrap">Food</a>
+            <a href="/eco-products.html" data-nav-link class="px-2.5 py-1.5 text-[13px] font-medium text-slate-700 hover:text-emerald-700 hover:bg-emerald-50/70 rounded-lg transition-colors whitespace-nowrap">Eco Products</a>
+            <a href="/green-tips.html" data-nav-link class="px-2.5 py-1.5 text-[13px] font-medium text-slate-700 hover:text-emerald-700 hover:bg-emerald-50/70 rounded-lg transition-colors whitespace-nowrap">Green Tips</a>
+            <a href="/gallery.html" data-nav-link class="px-2.5 py-1.5 text-[13px] font-medium text-slate-700 hover:text-emerald-700 hover:bg-emerald-50/70 rounded-lg transition-colors whitespace-nowrap">Gallery</a>
+            <a href="/contact.html" data-nav-link class="px-2.5 py-1.5 text-[13px] font-medium text-slate-700 hover:text-emerald-700 hover:bg-emerald-50/70 rounded-lg transition-colors whitespace-nowrap">Contact</a>
+          </nav>
+
+          <div class="flex items-center gap-3">
+            <a href="#materials" class="hidden sm:inline-flex items-center justify-center px-4 py-2 text-xs font-semibold text-white bg-emerald-800 rounded-lg hover:bg-emerald-700 shadow-sm transition-all whitespace-nowrap">
+              Materials Guide
+            </a>
+            <button id="mobile-menu-btn" type="button" aria-expanded="false" aria-label="Toggle navigation menu" class="lg:hidden p-2 rounded-lg text-slate-700 hover:bg-emerald-50">
+              <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div id="mobile-menu" class="hidden lg:hidden border-t border-slate-200 bg-white/95 px-4 pt-3 pb-6 space-y-1 shadow-xl">
+        <a href="/index.html" class="block px-3 py-2 rounded-md text-sm font-medium text-slate-700 hover:bg-emerald-50">Home</a>
+        <a href="/about.html" class="block px-3 py-2 rounded-md text-sm font-medium text-slate-700 hover:bg-emerald-50">About EcoLife</a>
+        <a href="/sustainable-living.html" class="block px-3 py-2 rounded-md text-sm font-medium text-slate-700 hover:bg-emerald-50">Sustainable Living</a>
+        <a href="/waste-management.html" class="block px-3 py-2 rounded-md text-sm font-medium text-slate-700 hover:bg-emerald-50">Waste Management</a>
+        <a href="/recycling.html" class="block px-3 py-2 rounded-md text-sm font-medium text-slate-700 hover:bg-emerald-50">Recycling</a>
+        <a href="/renewable-energy.html" class="block px-3 py-2 rounded-md text-sm font-medium text-slate-700 hover:bg-emerald-50">Renewable Energy</a>
+        <a href="/sustainable-food.html" class="block px-3 py-2 rounded-md text-sm font-medium text-slate-700 hover:bg-emerald-50">Sustainable Food</a>
+        <a href="/eco-products.html" class="block px-3 py-2 rounded-md text-sm font-medium text-slate-700 hover:bg-emerald-50">Eco Products</a>
+        <a href="/green-tips.html" class="block px-3 py-2 rounded-md text-sm font-medium text-slate-700 hover:bg-emerald-50">Green Tips</a>
+        <a href="/gallery.html" class="block px-3 py-2 rounded-md text-sm font-medium text-slate-700 hover:bg-emerald-50">Gallery</a>
+        <a href="/contact.html" class="block px-3 py-2 rounded-md text-sm font-medium text-slate-700 hover:bg-emerald-50">Contact</a>
+      </div>
+    </header>
+
+    <main>
+      <!-- Hero -->
+      <section class="bg-gradient-to-r from-emerald-950 via-teal-900 to-emerald-900 text-white py-16 sm:py-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <span class="text-xs font-semibold uppercase tracking-wider text-emerald-300">Circular Material Economy</span>
+          <h1 class="text-3xl sm:text-5xl font-extrabold tracking-tight mt-2 text-balance">
+            Understanding the Science of Recycling
+          </h1>
+          <p class="mt-4 text-emerald-100/90 text-lg max-w-3xl leading-relaxed">
+            Recycling transforms post-consumer waste into valuable raw inputs. Learn what materials can truly be remanufactured, how the closed loop works, and how to avoid the trap of "wishcycling".
+          </p>
+        </div>
+      </section>
+
+      <!-- What is Recycling & Benefits -->
+      <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            <div class="lg:col-span-6 space-y-5">
+              <span class="text-xs font-semibold uppercase tracking-wider text-emerald-700">The Closed-Loop Principle</span>
+              <h2 class="text-3xl font-bold text-slate-900 leading-tight">
+                What is True Recycling?
+              </h2>
+              <p class="text-slate-600 text-base leading-relaxed">
+                Recycling is the industrial process of collecting, sorting, processing, and remanufacturing discarded materials into new products instead of disposing of them in landfills or incinerators.
+              </p>
+              <p class="text-slate-600 text-base leading-relaxed">
+                For example, recycling an aluminum beverage can saves up to <strong>95% of the energy</strong> needed to extract virgin aluminum from bauxite ore, and aluminum can be infinitely recycled without degrading in quality.
+              </p>
+            </div>
+            <div class="lg:col-span-6">
+              <div class="grid grid-cols-2 gap-4">
+                <div class="p-5 rounded-2xl bg-emerald-50 border border-emerald-200">
+                  <p class="text-3xl font-extrabold text-emerald-800 tabular-nums">95%</p>
+                  <p class="text-xs font-semibold text-slate-800 mt-1">Energy Saved</p>
+                  <p class="text-xs text-slate-600 mt-1">When recycling aluminum versus virgin mining.</p>
+                </div>
+                <div class="p-5 rounded-2xl bg-blue-50 border border-blue-200">
+                  <p class="text-3xl font-extrabold text-blue-800 tabular-nums">17 Trees</p>
+                  <p class="text-xs font-semibold text-slate-800 mt-1">Saved per Ton</p>
+                  <p class="text-xs text-slate-600 mt-1">Of recycled cardboard and office paper.</p>
+                </div>
+                <div class="p-5 rounded-2xl bg-amber-50 border border-amber-200">
+                  <p class="text-3xl font-extrabold text-amber-800 tabular-nums">100%</p>
+                  <p class="text-xs font-semibold text-slate-800 mt-1">Infinite Cycle</p>
+                  <p class="text-xs text-slate-600 mt-1">Glass bottles can be remelted infinitely.</p>
+                </div>
+                <div class="p-5 rounded-2xl bg-teal-50 border border-teal-200">
+                  <p class="text-3xl font-extrabold text-teal-800 tabular-nums">3,000 lbs</p>
+                  <p class="text-xs font-semibold text-slate-800 mt-1">CO₂ Prevented</p>
+                  <p class="text-xs text-slate-600 mt-1">Per household with strict dry-stream sorting.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Materials Guide with Interactive Filter -->
+      <section id="materials" class="py-16 bg-[#faf9f6] border-y border-stone-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="text-center max-w-3xl mx-auto mb-10">
+            <span class="text-xs font-semibold uppercase tracking-wider text-emerald-800">Recyclability Breakdown</span>
+            <h2 class="text-3xl font-bold text-slate-900 mt-2">Materials That Can Be Recycled</h2>
+            <p class="text-slate-600 mt-3 text-base">Filter by category to check preparation rules and recycling efficiency.</p>
+          </div>
+
+          <!-- Interactive Filter Controls -->
+          <div class="flex flex-wrap items-center justify-center gap-2 mb-10">
+            <button data-material-filter="all" class="px-4 py-2 text-xs font-semibold rounded-lg bg-emerald-700 text-white transition-colors">
+              All Materials
+            </button>
+            <button data-material-filter="paper" class="px-4 py-2 text-xs font-semibold rounded-lg bg-white text-slate-700 border border-slate-200 hover:bg-slate-50 transition-colors">
+              Paper & Cardboard
+            </button>
+            <button data-material-filter="plastic" class="px-4 py-2 text-xs font-semibold rounded-lg bg-white text-slate-700 border border-slate-200 hover:bg-slate-50 transition-colors">
+              Plastics (#1 & #2)
+            </button>
+            <button data-material-filter="metal" class="px-4 py-2 text-xs font-semibold rounded-lg bg-white text-slate-700 border border-slate-200 hover:bg-slate-50 transition-colors">
+              Metals (Alum / Steel)
+            </button>
+            <button data-material-filter="glass" class="px-4 py-2 text-xs font-semibold rounded-lg bg-white text-slate-700 border border-slate-200 hover:bg-slate-50 transition-colors">
+              Glass Bottles & Jars
+            </button>
+          </div>
+
+          <!-- Materials Grid -->
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Item 1: Cardboard -->
+            <div data-material-item data-material-category="paper" class="bg-white p-6 rounded-2xl border border-stone-200 shadow-xs flex flex-col justify-between">
+              <div>
+                <div class="w-10 h-10 rounded-xl bg-amber-100 text-amber-900 flex items-center justify-center text-xl mb-3">📦</div>
+                <h4 class="text-lg font-bold text-slate-900">Corrugated Cardboard</h4>
+                <p class="text-xs text-emerald-800 font-semibold mt-0.5">High Recyclability (5–7 cycles)</p>
+                <p class="text-xs text-slate-600 mt-2 leading-relaxed">
+                  Shipping cartons, food boxes (without wax liners), clean packaging pads.
+                </p>
+                <div class="mt-4 pt-3 border-t border-slate-100 text-xs text-slate-500">
+                  <strong>Preparation:</strong> Remove heavy tape, flatten boxes completely, keep dry.
+                </div>
+              </div>
+            </div>
+
+            <!-- Item 2: PET Plastic #1 -->
+            <div data-material-item data-material-category="plastic" class="bg-white p-6 rounded-2xl border border-stone-200 shadow-xs flex flex-col justify-between">
+              <div>
+                <div class="w-10 h-10 rounded-xl bg-blue-100 text-blue-900 flex items-center justify-center text-xl mb-3">🧴</div>
+                <h4 class="text-lg font-bold text-slate-900">Polyethylene Terephthalate (#1 PET)</h4>
+                <p class="text-xs text-emerald-800 font-semibold mt-0.5">Widely Recyclable</p>
+                <p class="text-xs text-slate-600 mt-2 leading-relaxed">
+                  Transparent beverage bottles, cooking oil bottles, peanut butter jars.
+                </p>
+                <div class="mt-4 pt-3 border-t border-slate-100 text-xs text-slate-500">
+                  <strong>Preparation:</strong> Rinse clean, re-attach cap firmly, never crush flat.
+                </div>
+              </div>
+            </div>
+
+            <!-- Item 3: HDPE Plastic #2 -->
+            <div data-material-item data-material-category="plastic" class="bg-white p-6 rounded-2xl border border-stone-200 shadow-xs flex flex-col justify-between">
+              <div>
+                <div class="w-10 h-10 rounded-xl bg-teal-100 text-teal-900 flex items-center justify-center text-xl mb-3">🥛</div>
+                <h4 class="text-lg font-bold text-slate-900">High-Density Polyethylene (#2 HDPE)</h4>
+                <p class="text-xs text-emerald-800 font-semibold mt-0.5">Widely Recyclable</p>
+                <p class="text-xs text-slate-600 mt-2 leading-relaxed">
+                  Opaque milk jugs, laundry detergent bottles, shampoo containers.
+                </p>
+                <div class="mt-4 pt-3 border-t border-slate-100 text-xs text-slate-500">
+                  <strong>Preparation:</strong> Empty completely, rinse soap film, replace caps.
+                </div>
+              </div>
+            </div>
+
+            <!-- Item 4: Aluminum Cans -->
+            <div data-material-item data-material-category="metal" class="bg-white p-6 rounded-2xl border border-stone-200 shadow-xs flex flex-col justify-between">
+              <div>
+                <div class="w-10 h-10 rounded-xl bg-slate-200 text-slate-800 flex items-center justify-center text-xl mb-3">🥫</div>
+                <h4 class="text-lg font-bold text-slate-900">Aluminum Beverage Cans</h4>
+                <p class="text-xs text-emerald-800 font-semibold mt-0.5">Infinite Recyclability (100%)</p>
+                <p class="text-xs text-slate-600 mt-2 leading-relaxed">
+                  Soda cans, sparkling water cans, clean aluminum baking foil (balled up).
+                </p>
+                <div class="mt-4 pt-3 border-t border-slate-100 text-xs text-slate-500">
+                  <strong>Preparation:</strong> Quick rinse; can be remelted and back on shelves in 60 days.
+                </div>
+              </div>
+            </div>
+
+            <!-- Item 5: Steel & Tin Cans -->
+            <div data-material-item data-material-category="metal" class="bg-white p-6 rounded-2xl border border-stone-200 shadow-xs flex flex-col justify-between">
+              <div>
+                <div class="w-10 h-10 rounded-xl bg-stone-200 text-stone-800 flex items-center justify-center text-xl mb-3">🥫</div>
+                <h4 class="text-lg font-bold text-slate-900">Steel & Tin Food Cans</h4>
+                <p class="text-xs text-emerald-800 font-semibold mt-0.5">Infinite Recyclability</p>
+                <p class="text-xs text-slate-600 mt-2 leading-relaxed">
+                  Canned soup, pet food tins, crushed tomato cans.
+                </p>
+                <div class="mt-4 pt-3 border-t border-slate-100 text-xs text-slate-500">
+                  <strong>Preparation:</strong> Rinse thoroughly, press lid inside can to protect handlers.
+                </div>
+              </div>
+            </div>
+
+            <!-- Item 6: Glass Containers -->
+            <div data-material-item data-material-category="glass" class="bg-white p-6 rounded-2xl border border-stone-200 shadow-xs flex flex-col justify-between">
+              <div>
+                <div class="w-10 h-10 rounded-xl bg-emerald-100 text-emerald-900 flex items-center justify-center text-xl mb-3">🍾</div>
+                <h4 class="text-lg font-bold text-slate-900">Clear & Amber Glass Jars</h4>
+                <p class="text-xs text-emerald-800 font-semibold mt-0.5">Infinite Recyclability</p>
+                <p class="text-xs text-slate-600 mt-2 leading-relaxed">
+                  Beverage bottles, pasta sauce jars, pickle containers.
+                </p>
+                <div class="mt-4 pt-3 border-t border-slate-100 text-xs text-slate-500">
+                  <strong>Preparation:</strong> Rinse clean; never mix with heat-resistant Pyrex or window glass.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Step-by-Step Recycling Lifecycle Timeline -->
+      <section class="py-16 bg-white">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="text-center mb-14">
+            <span class="text-xs font-semibold uppercase tracking-wider text-emerald-800">Closed-Loop Engineering</span>
+            <h2 class="text-3xl font-bold text-slate-900 mt-2">The Step-by-Step Recycling Lifecycle</h2>
+          </div>
+
+          <div class="relative border-l-2 border-emerald-300 ml-6 pl-8 space-y-10">
+            <!-- Step 1 -->
+            <div class="relative group">
+              <div class="absolute -left-[45px] top-0 w-8 h-8 rounded-full bg-emerald-700 text-white flex items-center justify-center font-bold text-xs ring-4 ring-white">1</div>
+              <h4 class="text-lg font-bold text-slate-900">Collection & Curbside Hauling</h4>
+              <p class="text-sm text-slate-600 mt-1 leading-relaxed">
+                Recyclable dry waste is collected from residential and commercial receptacles and transported directly to regional Material Recovery Facilities (MRF).
+              </p>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="relative group">
+              <div class="absolute -left-[45px] top-0 w-8 h-8 rounded-full bg-emerald-700 text-white flex items-center justify-center font-bold text-xs ring-4 ring-white">2</div>
+              <h4 class="text-lg font-bold text-slate-900">Optical & Mechanical Sorting</h4>
+              <p class="text-sm text-slate-600 mt-1 leading-relaxed">
+                Rotating trommels separate cardboard; eddy current magnets eject non-ferrous aluminum; near-infrared (NIR) sensors sort plastics by resin code at 30 items per second.
+              </p>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="relative group">
+              <div class="absolute -left-[45px] top-0 w-8 h-8 rounded-full bg-emerald-700 text-white flex items-center justify-center font-bold text-xs ring-4 ring-white">3</div>
+              <h4 class="text-lg font-bold text-slate-900">Baling, Shredding & Washing</h4>
+              <p class="text-sm text-slate-600 mt-1 leading-relaxed">
+                Separated commodities are compacted into 1,000-pound bales. Polymers are shredded into small flakes, washed in hot caustic baths to dissolve adhesives, and sanitized.
+              </p>
+            </div>
+
+            <!-- Step 4 -->
+            <div class="relative group">
+              <div class="absolute -left-[45px] top-0 w-8 h-8 rounded-full bg-emerald-700 text-white flex items-center justify-center font-bold text-xs ring-4 ring-white">4</div>
+              <h4 class="text-lg font-bold text-slate-900">Pelletizing, Melting & Reprocessing</h4>
+              <p class="text-sm text-slate-600 mt-1 leading-relaxed">
+                Clean plastic flakes are melted and extruded into uniform nurdles (pellets); aluminum and steel are cast into ingots; paper pulp is screened and rolled into fresh sheets.
+              </p>
+            </div>
+
+            <!-- Step 5 -->
+            <div class="relative group">
+              <div class="absolute -left-[45px] top-0 w-8 h-8 rounded-full bg-emerald-700 text-white flex items-center justify-center font-bold text-xs ring-4 ring-white">5</div>
+              <h4 class="text-lg font-bold text-slate-900">New Consumer Product Rebirth</h4>
+              <p class="text-sm text-slate-600 mt-1 leading-relaxed">
+                Pellets and ingots return to factories to manufacture new beverage cans, automotive parts, cardboard shipping boxes, fleece outerwear, and sustainable packaging.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Common Recycling Mistakes: Stop Wishcycling -->
+      <section class="py-16 bg-[#f4ede4]/60 border-t border-stone-200">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="text-center mb-12">
+            <span class="text-xs font-semibold uppercase tracking-wider text-rose-800">Quality Control</span>
+            <h2 class="text-3xl font-bold text-slate-900 mt-2">Common Recycling Mistakes: Stop "Wishcycling"</h2>
+            <p class="text-slate-600 mt-3 text-base">Wishcycling occurs when you toss non-recyclable items into the blue bin hoping they will be recycled. In reality, it contaminates whole truckloads.</p>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="p-6 bg-white rounded-2xl border border-stone-200">
+              <span class="text-2xl mb-2 block">🛍️</span>
+              <h4 class="font-bold text-slate-900">Plastic Grocery Bags in Bins</h4>
+              <p class="text-xs text-slate-600 mt-2 leading-relaxed">
+                Film plastics tangle in sorting conveyor axels, forcing entire plants to halt operations for hours. Return bags to grocery store dropboxes instead.
+              </p>
+            </div>
+
+            <div class="p-6 bg-white rounded-2xl border border-stone-200">
+              <span class="text-2xl mb-2 block">☕</span>
+              <h4 class="font-bold text-slate-900">Paper Coffee Cups</h4>
+              <p class="text-xs text-slate-600 mt-2 leading-relaxed">
+                Takeaway coffee cups contain a hidden polyethylene waterproof plastic film lining that paper repulping facilities cannot dissolve. Use a reusable travel mug.
+              </p>
+            </div>
+
+            <div class="p-6 bg-white rounded-2xl border border-stone-200">
+              <span class="text-2xl mb-2 block">🍕</span>
+              <h4 class="font-bold text-slate-900">Greasy Pizza Box Bottoms</h4>
+              <p class="text-xs text-slate-600 mt-2 leading-relaxed">
+                Oils and food stains do not break down in water vats during paper recycling, destroying the tensile strength of cardboard fibers. Tear off clean lids to recycle; compost the oily base!
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Global Footer -->
+    <footer class="bg-emerald-950 text-emerald-100 pt-16 pb-12 border-t border-emerald-900">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 mb-12">
+          <div class="lg:col-span-2 space-y-4">
+            <a href="/index.html" class="flex items-center gap-2">
+              <span class="text-2xl">🌱</span>
+              <span class="text-2xl font-bold tracking-tight text-white">EcoLife</span>
+            </a>
+            <p class="text-emerald-200/80 text-sm leading-relaxed max-w-sm">
+              An open educational initiative dedicated to demystifying environmental science, promoting zero-waste lifestyles, and accelerating renewable energy adoption worldwide.
+            </p>
+            <p class="text-xs text-emerald-400 font-medium">Building a greener future, one choice at a time.</p>
+          </div>
+          <div>
+            <h4 class="text-sm font-semibold uppercase tracking-wider text-white mb-4">Quick Links</h4>
+            <ul class="space-y-2.5 text-sm text-emerald-200/80">
+              <li><a href="/index.html" class="hover:text-white transition-colors">Home</a></li>
+              <li><a href="/about.html" class="hover:text-white transition-colors">About EcoLife</a></li>
+              <li><a href="/sustainable-living.html" class="hover:text-white transition-colors">Sustainable Living</a></li>
+              <li><a href="/green-tips.html" class="hover:text-white transition-colors">Green Tips & Habits</a></li>
+              <li><a href="/gallery.html" class="hover:text-white transition-colors">Photo Gallery</a></li>
+              <li><a href="/contact.html" class="hover:text-white transition-colors">Contact</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="text-sm font-semibold uppercase tracking-wider text-white mb-4">Sustainability Topics</h4>
+            <ul class="space-y-2.5 text-sm text-emerald-200/80">
+              <li><a href="/waste-management.html" class="hover:text-white transition-colors">Waste Management</a></li>
+              <li><a href="/recycling.html" class="hover:text-white transition-colors">Recycling Timeline</a></li>
+              <li><a href="/renewable-energy.html" class="hover:text-white transition-colors">Renewable Energy</a></li>
+              <li><a href="/sustainable-food.html" class="hover:text-white transition-colors">Sustainable Food</a></li>
+              <li><a href="/eco-products.html" class="hover:text-white transition-colors">Eco-Friendly Products</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="text-sm font-semibold uppercase tracking-wider text-white mb-4">Get in Touch</h4>
+            <p class="text-xs text-emerald-200/80 leading-relaxed mb-3">
+              Environmental Education Hub<br />
+              100 Green Canopy Way, Suite 400<br />
+              info@ecolife-sustainability.org
+            </p>
+            <div class="flex items-center gap-3 text-lg pt-1">
+              <a href="#" aria-label="EcoLife Twitter" class="w-8 h-8 rounded-lg bg-emerald-900 text-emerald-300 hover:bg-emerald-800 hover:text-white flex items-center justify-center transition-colors">𝕏</a>
+              <a href="#" aria-label="EcoLife LinkedIn" class="w-8 h-8 rounded-lg bg-emerald-900 text-emerald-300 hover:bg-emerald-800 hover:text-white flex items-center justify-center transition-colors">in</a>
+              <a href="#" aria-label="EcoLife Instagram" class="w-8 h-8 rounded-lg bg-emerald-900 text-emerald-300 hover:bg-emerald-800 hover:text-white flex items-center justify-center transition-colors">📸</a>
+              <a href="#" aria-label="EcoLife GitHub" class="w-8 h-8 rounded-lg bg-emerald-900 text-emerald-300 hover:bg-emerald-800 hover:text-white flex items-center justify-center transition-colors">💻</a>
+            </div>
+          </div>
+        </div>
+        <div class="pt-8 border-t border-emerald-900/80 flex flex-col sm:flex-row items-center justify-between text-xs text-emerald-400/80 gap-4">
+          <p>© 2026 EcoLife. All Rights Reserved.</p>
+          <p>Building a greener future, one choice at a time.</p>
+        </div>
+      </div>
+    </footer>
+    <script src="/js/site.js"></script>
+    <script type="module" src="/src/site.js"></script>
+  </body>
+</html>
